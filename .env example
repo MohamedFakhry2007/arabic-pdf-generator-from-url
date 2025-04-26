@@ -1,0 +1,3 @@
+PDFLAYER_API_KEY=Your_PDFLayer_API_Key
+FLASK_APP=app
+FLASK_ENV=development

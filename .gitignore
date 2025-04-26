@@ -1,0 +1,65 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+
+# Poetry
+poetry.lock
+
+# Installers
+.python-version
+_build/
+dist/
+build/
+install_requires.txt
+*.manifest
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# OS generated files #
+.DS_Store
+Thumbs.db
+
+# Firebase Studio/IDX
+.idx/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Logs
+logs/
+app/static/pdfs/
+
+#env file
+.env
+
+# Temporary files
+*.swp
+*.tmp
+tmp/
+
+# Distribution / packaging
+dist/*
+!dist/.git

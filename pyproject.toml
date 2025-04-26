@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "arabic-pdf-generator"
+version = "0.1.0"
+description = "Arabic RTL Flask application for URL to PDF conversion"
+authors = ["Mohamed Fakhry <mohamedfakhrysmile@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = { version = "^3.0.0", extras = ["async"] }
+python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+gunicorn = "^22.0.0"
+loguru = "^0.7.2"
+aiohttp = "^3.9.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.10.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

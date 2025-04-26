@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <h1>حول أي صفحة ويب إلى ملف PDF</h1>
+    <p>أداة سهلة الاستخدام لتحويل أي رابط إلى ملف PDF عالي الجودة</p>
+</section>
+
+<section class="converter">
+    <div class="converter-form">
+        <div class="input-group">
+            <input type="text" id="url-input" placeholder="أدخل رابط الموقع هنا" dir="ltr">
+            <button id="convert-btn" class="btn">تحويل إلى PDF</button>
+        </div>
+        <div id="error-message" class="error-message"></div>
+    </div>
+    
+    <div id="result-container" class="result-container hidden">
+        <div class="success-message">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <p>تم تحويل الصفحة بنجاح!</p>
+        </div>
+        <div class="download-section">
+            <a id="download-link" class="btn download-btn" target="_blank">تحميل الملف</a>
+        </div>
+    </div>
+    
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>جاري التحويل...</p>
+    </div>
+</section>
+
+<section class="features">
+    <h2>مميزات الخدمة</h2>
+    <div class="features-grid">
+        <div class="feature">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </div>
+            <h3>سريع وفعال</h3>
+            <p>تحويل سريع لأي صفحة ويب إلى ملف PDF</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+            </div>
+            <h3>جودة عالية</h3>
+            <p>ملفات PDF عالية الجودة مع الحفاظ على التنسيق الأصلي</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+            </div>
+            <h3>آمن وموثوق</h3>
+            <p>تحويل آمن للملفات مع حماية خصوصية البيانات</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
